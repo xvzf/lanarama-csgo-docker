@@ -12,10 +12,10 @@ from _thread import start_new_thread
 
 def send_mail(serverip, msg):
     receivers = ["matthias@xvzf.tech"]
-    server = smtplib.SMTP('hosted.mailcow.de:587')
+    server = smtplib.SMTP('hosted.dumbmailserver.de:587')
     server.starttls()
-    server.login("lanarama@xvzf.tech", "1Rl5ZhlL28TR4hqd")
-    for i in receivers: server.sendmail("lanarama@xvzf.tech", i, "\r\n".join(["From: lanarama@xvzf.tech","To: %s" % i, "Subject: CSGO SERVER IP:%s" % serverip, "", msg]))
+    server.login("not@existing.de", "1Rl5ZhlL28TR4hqd-not_active_:P")
+    for i in receivers: server.sendmail("lanarama@xvzf.tech", i, "\r\n".join(["From: not@existing.de","To: %s" % i, "Subject: CSGO SERVER IP:%s" % serverip, "", msg]))
     server.quit()
 
 class csvetovote:
